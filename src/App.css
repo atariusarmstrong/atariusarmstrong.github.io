@@ -69,6 +69,7 @@ h2 {
   display: grid;
   grid-template-columns: 600px 600px;
   justify-items: end;
+  margin: 0 auto 80px auto;
 }
 
 .contactBox {
@@ -93,6 +94,7 @@ h2 {
   height: 400px;
   margin: auto;
   text-align: center;
+  padding: 80px 0;
 }
 
 .choreoInfo h1 {
@@ -114,6 +116,17 @@ h2 {
   display: inline-block;
 }
 
+.portfolio {
+  height: 400px;
+  padding: 80px 0;
+}
+
+.portfolio h2{
+  text-align: center;
+}
+.portfolio ul {
+  list-style-type: none;
+}
 .projectContainer {
   display: flex;
 }

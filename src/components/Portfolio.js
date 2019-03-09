@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 class Portfolio extends Component {
     state = {
@@ -27,28 +30,32 @@ class Portfolio extends Component {
     }
     render() {
         return (
-            <div>
+            <div className='portfolio'>
                 <h2>Recent Projects</h2>
-                <div>
-                    <ul>
-                        <li>Full Stack Web Development</li>
-                        <li>User Interface Design</li>
-                        <li>Logo & Branding</li>
-                    </ul>
-                </div>
-                
-                <div className='projectContainer'>
-                    {this.state.projects.map((project, i) => {
-                        return (
-                            <a href={project.url}>
-                                <div key={i} className='projectBox'>
-                                    <h3>{project.title}</h3>
-                                    <p>{project.description}</p>
-                                </div>
-                            </a>
-                    )
-                    })}
-                </div>
+                <Container>
+                    <Row>
+                        <Col>
+                            <ul>
+                                <li>Full Stack Web Development</li>
+                                <li>User Interface Design</li>
+                                <li>Logo & Branding</li>
+                            </ul>
+                        </Col>
+                        
+                        <Col className='projectContainer'>
+                            {this.state.projects.map((project, i) => {
+                                return (
+                                    <a href={project.url}>
+                                        <div key={i} className='projectBox'>
+                                            <h3>{project.title}</h3>
+                                            <p>{project.description}</p>
+                                        </div>
+                                    </a>
+                            )
+                            })}
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         );
     }
