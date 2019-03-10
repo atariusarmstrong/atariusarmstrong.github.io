@@ -8,7 +8,7 @@ const Box = posed.div({
         opacity: 1,
         transition: {
             ease: linear,
-            duration: 300}
+            duration: 100}
     }
 })
 
