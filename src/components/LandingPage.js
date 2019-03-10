@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import posed from 'react-pose'
 import { linear } from '@popmotion/easing';
+import SplitText from 'react-pose-text'
 
 const Box = posed.div({
     hidden: {opacity: 0},
@@ -12,9 +13,23 @@ const Box = posed.div({
     }
 })
 
+const charPoses = {
+    exit: { opacity: 0, y: 80 },
+    enter: {
+      opacity: 1,
+      y: 0,
+      delay: ({ charIndex }) => charIndex * 300
+    }
+  };
+
 class LandingPage extends Component {
     state = {
-        isVisible: true
+        isVisible: true,
+        titles: [
+            'developer',
+            'choreographer',
+            'creative'
+        ]
     }
 
     componentDidMount() {
@@ -31,7 +46,15 @@ class LandingPage extends Component {
                         <br/>
                         Armstrong
                     </h1>
-                    <h3>performer. teacher. <Box className='creative' pose={this.state.isVisible ? 'visible' : 'hidden'}>creative.</Box></h3>
+                    <h3>performer. teacher. 
+                                    {/* <Box className='creative' pose={this.state.isVisible ? 'visible' : 'hidden'}> */}
+                                    <SplitText initialPose="exit" pose="enter" charPoses={charPoses} className='creative'>
+                                        creative.
+                                    </SplitText>
+                                    {/* </Box> */}
+
+                        
+                    </h3>
                 </div>
                 <img className='downArrow' src='images/icons/down.png' alt=''/>
             </div>

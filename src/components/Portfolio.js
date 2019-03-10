@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
+import posed from 'react-pose'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+
+//I want make each div move from left to right
+//Once it reaches the right it should disappear and show the next project
+
+const Project = posed.div({
+    left: {x: -100},
+    right: {x: 100}
+})
 
 class Portfolio extends Component {
     state = {
@@ -25,8 +34,14 @@ class Portfolio extends Component {
             title: 'REA Entertainment',
             description: 'Fullstack application using React.js and Django for a mock website for a theatrical production company.',
             url: 'https://github.com/atariusarmstrong/rea_entertainment'
-        }
-    ]
+        }],
+        position: true
+    }
+
+    componentDidMount = () => {
+        setInterval(() => {
+            this.setState({position: !this.state.position});
+        }, 1000)
     }
     render() {
         return (
@@ -46,10 +61,10 @@ class Portfolio extends Component {
                             {this.state.projects.map((project, i) => {
                                 return (
                                     <a href={project.url}>
-                                        <div key={i} className='projectBox'>
+                                        <Project key={i} className='projectBox' pose={this.state.position ? 'left' : 'right'}>
                                             <h3>{project.title}</h3>
                                             <p>{project.description}</p>
-                                        </div>
+                                        </Project>
                                     </a>
                             )
                             })}
