@@ -34,6 +34,11 @@ h2 {
   margin: 0 auto;
 }
 
+.creative {
+  color: #9F9200;
+  display: inline-block;
+}
+
 .hero h1 {
   font-size: 80px;
   font-family: 'Oswald', sans-serif;
