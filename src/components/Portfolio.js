@@ -1,15 +1,33 @@
 import React, { Component } from 'react';
-import posed from 'react-pose'
+import posed, {PoseGroup} from 'react-pose'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { keyframes } from 'popmotion';
 
 //I want make each div move from left to right
 //Once it reaches the right it should disappear and show the next project
 
+// const Project = posed.div({
+//     transition: {
+//         type: keyframes,
+//         values: [0, 3, 10],
+//         min: 2,
+//         max: 9
+//     },
+//     left: {
+//         x: -100,
+//         opacity: 1
+//     },
+//     right: {
+//         x: 100,
+//         opacity: 0,
+//     }
+// })
+
 const Project = posed.div({
-    left: {x: -100},
-    right: {x: 100}
+    enter: {opacity: 1},
+    exit: {opacity: 0}
 })
 
 class Portfolio extends Component {
@@ -38,11 +56,11 @@ class Portfolio extends Component {
         position: true
     }
 
-    componentDidMount = () => {
-        setInterval(() => {
-            this.setState({position: !this.state.position});
-        }, 1000)
-    }
+    // componentDidMount = () => {
+    //     setInterval(() => {
+    //         this.setState({position: !this.state.position});
+    //     }, 1000)
+    // }
     render() {
         return (
             <div className='portfolio'>
