@@ -1,5 +1,16 @@
 import React, { Component } from 'react';
 import {Container, Row, Col} from 'react-bootstrap'
+import posed from 'react-pose'
+
+const Resume = posed.div({
+    hoverable: true,
+    init: {
+        background: 'rgba(159, 146, 0, 0)'
+    },
+    hover: {
+        background: 'rgba(159, 146, 0, 1)'
+    }
+})
 
 class About extends Component {
     render() {
@@ -17,10 +28,10 @@ class About extends Component {
                             </Row>
                             <Row>
                                 <Col>
-                                    <div className='resumeButton'>Developer Resume</div>
+                                    <Resume className='resumeButton'>Developer Resume</Resume>
                                 </Col>
                                 <Col>
-                                    <div className='resumeButton'>Choreographer Resume</div>
+                                    <Resume className='resumeButton'>Choreographer Resume</Resume>
                                 </Col>
                             </Row>
                         </Container>
