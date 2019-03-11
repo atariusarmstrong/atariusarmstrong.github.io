@@ -79,7 +79,6 @@ h2 {
 
 .contactBox {
   background-color: #9F9200;
-  height: 40px;
   width: 100%;
   text-align: center;
   color: white;
@@ -158,4 +157,8 @@ h2 {
 
 .carousel img{
   object-fit: scale-down;
+}
+
+.socialIcons {
+  margin: 5px;
 }
