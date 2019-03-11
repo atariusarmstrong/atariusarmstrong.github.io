@@ -29,6 +29,19 @@ const Project = posed.div({
     enter: {opacity: 1},
     exit: {opacity: 0}
 })
+const List = posed.ul({
+    open:
+        {x: '0%',
+        delayChildren: 200,
+        staggerChildren: 500
+    },
+    closed: {x: '-100%', delay: 300}
+})
+
+const Skill = posed.li({
+    open: {y: 0, opacity: 1},
+    closed: {y: 20, opacity: 0}
+})
 
 class Portfolio extends Component {
     state = {
@@ -53,9 +66,15 @@ class Portfolio extends Component {
             description: 'Fullstack application using React.js and Django for a mock website for a theatrical production company.',
             url: 'https://github.com/atariusarmstrong/rea_entertainment'
         }],
-        position: true
+        position: true,
+        isOpen: false
     }
 
+    componentWillMount = () => {
+        setTimeout(this.toggle, 1000)
+    }
+
+    toggle = () => this.setState({ isOpen: !this.state.isOpen })
     // componentDidMount = () => {
     //     setInterval(() => {
     //         this.setState({position: !this.state.position});
@@ -68,11 +87,11 @@ class Portfolio extends Component {
                 <Container>
                     <Row>
                         <Col>
-                            <ul>
-                                <li>Full Stack Web Development</li>
-                                <li>User Interface Design</li>
-                                <li>Logo & Branding</li>
-                            </ul>
+                            <List pose={this.state.isOpen ? 'open' : 'closed'}>
+                                <Skill>Full Stack Web Development</Skill>
+                                <Skill>User Interface Design</Skill>
+                                <Skill>Logo & Branding</Skill>
+                            </List>
                         </Col>
                         
                         <Col className='projectContainer'>

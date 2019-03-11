@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Container, Row, Col} from 'react-bootstrap'
 import posed from 'react-pose'
 
+
 const Resume = posed.div({
     hoverable: true,
     init: {
@@ -37,7 +38,6 @@ class About extends Component {
                         </Container>
                     </div>
 
-                    
                 </div>
                 
             </div>
