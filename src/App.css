@@ -131,7 +131,7 @@ h2 {
 }
 
 .portfolio {
-  height: 400px;
+  height: 800px;
   padding: 80px 0;
 }
 
@@ -154,4 +154,8 @@ h2 {
 }
 .projectBox p {
   font-size: 10px;
+}
+
+.carousel img{
+  object-fit: scale-down;
 }

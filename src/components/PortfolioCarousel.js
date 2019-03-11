@@ -8,6 +8,10 @@ const Container = styled.div`
     overflow: hidden;
     width: 700px;
     height: 500px;
+    img {
+        width: 700px;
+        height: 500px;
+    }
 `
 
 const CarouselUI = ({ children }) => <Container>{children}</Container>;
@@ -19,28 +23,31 @@ class PortfolioCarousel extends Component {
             title: "Jeopardy",
             description: "A static HTML/CSS/JS replica of the game show jeopardy.",
             url: 'https://github.com/atariusarmstrong/unit1Project',
-            image: ''
+            image: '/images/Jeopardy.png'
         },
         {
             title: "Bartel",
             description: "Fullstack application using Express & Node.js where users can log their favorite bars to day drink.",
-            url: 'https://github.com/atariusarmstrong/bartel'
+            url: 'https://github.com/atariusarmstrong/bartel',
+            image: '/images/bartel.png'
         },
         {
             title: "TripShare",
             description: "Fullstack application utilizing Mongo, Express, React.js, and Node.js for users to log future group travel plans.",
-            url: 'https://github.com/atariusarmstrong/trip-share'
+            url: 'https://github.com/atariusarmstrong/trip-share',
+            image: '/images/tripshare.png'
         },
         {
             title: 'REA Entertainment',
             description: 'Fullstack application using React.js and Django for a mock website for a theatrical production company.',
-            url: 'https://github.com/atariusarmstrong/rea_entertainment'
+            url: 'https://github.com/atariusarmstrong/rea_entertainment',
+            image: ''
         }]
     }
     render() {
         return (
             <div>
-                <Carousel defaultWait={5000} >
+                <Carousel defaultWait={5000} className='carousel'>
                     {this.state.projects.map((project, i ) => {
                         return (
                                 <Slide right>
@@ -48,6 +55,7 @@ class PortfolioCarousel extends Component {
                                     <div key={i}>
                                         <a href={project.url}>
                                             <h3>{project.title}</h3>
+                                            <img src={project.image} atl={project.title}/>
                                             <p>{project.description}</p>
                                         </a>
                                     </div>
