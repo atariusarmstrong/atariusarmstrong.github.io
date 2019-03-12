@@ -56,7 +56,9 @@ class LandingPage extends Component {
                         
                     </h3>
                 </div>
-                <img className='downArrow' src='images/icons/down.png' alt=''/>
+                <a href='#aboutme'>
+                    <img className='downArrow' src='images/icons/down.png' alt=''/>
+                </a>
             </div>
         );
     }

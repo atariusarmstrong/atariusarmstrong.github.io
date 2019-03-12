@@ -16,7 +16,7 @@ const Resume = posed.div({
 class About extends Component {
     render() {
         return (
-            <div className='bioBlock'>
+            <div className='bioBlock' id='aboutme'>
                <img className='headshot' src='images/AtariusArmstrong.jpg' alt="Atarius Armstrong"/>
                 <div>
                     <div>

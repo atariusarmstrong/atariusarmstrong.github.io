@@ -71,6 +71,8 @@ h2 {
 
 
 .bioBlock {
+  padding-top: 100px;
+  padding-bottom: 20px;
   display: grid;
   grid-template-columns: 600px 600px;
   justify-items: end;
@@ -87,10 +89,12 @@ h2 {
 }
 
 .choreographyBox {
-  height: 350px;
+  height: 400px;
   background-image: url(./rockrememberbg.png);
   background-size: cover;
   background-attachment: fixed;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .choreoInfo {
@@ -169,4 +173,14 @@ h2 {
 .carouselImage {
   height: 500px;
   width: 700px;
+}
+
+.navigation {
+  background-color: #9F9200;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+}
+
+.navHeader {
+  text-transform: uppercase;
 }

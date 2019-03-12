@@ -7,7 +7,7 @@ import {SocialIcon} from 'react-social-icons'
 class Contact extends Component {
     render() {
         return (
-            <footer className='contactBox'>
+            <footer className='contactBox' id='contact'>
                 <Container>
                     <Row className="justify-content-md-center">
                         <SocialIcon url="http://linkedin.com/in/atariusarmstrong" bgColor='#ffffff' className='socialIcons' style={{height: 25, width: 25}}/>

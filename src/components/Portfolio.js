@@ -32,14 +32,10 @@ class Portfolio extends Component {
     }
 
     toggle = () => this.setState({ isOpen: !this.state.isOpen })
-    // componentDidMount = () => {
-    //     setInterval(() => {
-    //         this.setState({position: !this.state.position});
-    //     }, 1000)
-    // }
+
     render() {
         return (
-            <div className='portfolio'>
+            <div className='portfolio' id='portfolio'>
                 <h2>Recent Projects</h2>
                 <Container>
                     <Row>

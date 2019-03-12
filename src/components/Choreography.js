@@ -18,7 +18,7 @@ class Choreography extends Component {
     }
     render() {
         return (
-            <div className='choreographyBox'>
+            <div className='choreographyBox' id='choreography'>
             <h1>Choreography</h1>
                 <div>
                     
