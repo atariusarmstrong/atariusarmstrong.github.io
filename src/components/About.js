@@ -32,8 +32,6 @@ class About extends Component {
                                     <a href='images/atarius_armstrong.pdf' download target='_blank'>
                                         <Resume className='resumeButton'>Developer Resume</Resume>
                                     </a>
-                                        
-                                        {/* <DevResume/> */}
                                 </Col>
                                 <Col>
                                     <a href='images/atarius_armstrong_actor.pdf' download target='_blank'>
