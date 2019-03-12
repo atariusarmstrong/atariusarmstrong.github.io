@@ -43,7 +43,14 @@ class PortfolioCarousel extends Component {
             description: 'Fullstack application using React.js and Django for a mock website for a theatrical production company.',
             url: 'https://github.com/atariusarmstrong/rea_entertainment',
             image: ''
-        }]
+        },
+        {
+            title: "Kingdom Kustoms",
+            description: "",
+            url: 'https://kingdomkustoms.org',
+            image: 'images/kingdomkustoms.png'
+        }
+    ]
     }
     render() {
         return (
@@ -71,7 +78,7 @@ class PortfolioCarousel extends Component {
                             <Carousel.Item key={i}>
                                 <a href={project.url}>
                                     
-                                    <img src={project.image} alt={project.title} className="d-block w-100"/>
+                                    <img src={project.image} alt={project.title} className="d-block carouselImage"/>
                                     <Carousel.Caption>
                                         <h3>{project.title}</h3>
                                         <p>{project.description}</p>

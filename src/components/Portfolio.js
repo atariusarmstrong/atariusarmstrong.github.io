@@ -3,35 +3,10 @@ import posed, {PoseGroup} from 'react-pose'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { keyframes } from 'popmotion';
-import makeCarousel from 'react-reveal/makeCarousel'
-import Slide from 'react-reveal/Slide'
 import PortfolioCarousel from './PortfolioCarousel';
 
-//I want make each div move from left to right
-//Once it reaches the right it should disappear and show the next project
 
-// const Project = posed.div({
-//     transition: {
-//         type: keyframes,
-//         values: [0, 3, 10],
-//         min: 2,
-//         max: 9
-//     },
-//     left: {
-//         x: -100,
-//         opacity: 1
-//     },
-//     right: {
-//         x: 100,
-//         opacity: 0,
-//     }
-// })
 
-const Project = posed.div({
-    enter: {opacity: 1},
-    exit: {opacity: 0}
-})
 const List = posed.ul({
     open:
         {x: '0%',
