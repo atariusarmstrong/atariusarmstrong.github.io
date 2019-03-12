@@ -24,19 +24,19 @@ class PortfolioCarousel extends Component {
             title: "Jeopardy",
             description: "A static HTML/CSS/JS replica of the game show jeopardy.",
             url: 'https://github.com/atariusarmstrong/unit1Project',
-            image: '/images/Jeopardy.png'
+            image: 'images/Jeopardy.png'
         },
         {
             title: "Bartel",
             description: "Fullstack application using Express & Node.js where users can log their favorite bars to day drink.",
             url: 'https://github.com/atariusarmstrong/bartel',
-            image: '/images/bartel.png'
+            image: 'images/bartel.png'
         },
         {
             title: "TripShare",
             description: "Fullstack application utilizing Mongo, Express, React.js, and Node.js for users to log future group travel plans.",
             url: 'https://github.com/atariusarmstrong/trip-share',
-            image: '/images/tripshare.png'
+            image: 'images/tripshare.png'
         },
         {
             title: 'REA Entertainment',
