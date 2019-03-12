@@ -29,10 +29,16 @@ class About extends Component {
                             </Row>
                             <Row>
                                 <Col>
-                                    <Resume className='resumeButton'>Developer Resume</Resume>
+                                    <a href='images/atarius_armstrong.pdf' download target='_blank'>
+                                        <Resume className='resumeButton'>Developer Resume</Resume>
+                                    </a>
+                                        
+                                        {/* <DevResume/> */}
                                 </Col>
                                 <Col>
-                                    <Resume className='resumeButton'>Choreographer Resume</Resume>
+                                    <a href='images/atarius_armstrong_actor.pdf' download target='_blank'>
+                                        <Resume className='resumeButton'>Choreographer Resume</Resume>
+                                    </a>   
                                 </Col>
                             </Row>
                         </Container>
