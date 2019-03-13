@@ -2,7 +2,7 @@
   "name": "atariusarmstrong",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://atariusarmstrong.github.io/portfolio",
+  "homepage": "http://atariusarmstrong.com",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.2",
