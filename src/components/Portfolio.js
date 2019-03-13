@@ -6,6 +6,17 @@ import Col from 'react-bootstrap/Col'
 import PortfolioCarousel from './PortfolioCarousel';
 
 
+const Button = posed.div({
+    hoverable: true,
+    init: {
+        background: 'rgba(159, 146, 0, 0)'
+    },
+    hover: {
+        background: 'rgba(159, 146, 0, 1)'
+    }
+})
+
+
 
 const List = posed.ul({
     open:
@@ -39,18 +50,26 @@ class Portfolio extends Component {
                 <h2>Recent Projects</h2>
                 <Container>
                     <Row>
-                        <Col>
-                            <List pose={this.state.isOpen ? 'open' : 'closed'}>
-                                <Skill>Full Stack Web Development</Skill>
-                                <Skill>User Interface Design</Skill>
-                                <Skill>Logo & Branding</Skill>
-                            </List>
+                        <Col className='justify-content-center'>
+                            <Row>
+                                <List pose={this.state.isOpen ? 'open' : 'closed'} className='skills'>
+                                    <Skill>Full Stack Web Development</Skill>
+                                    <Skill>User Interface Design</Skill>
+                                    <Skill>Logo & Branding</Skill>
+                                </List>
+                            </Row>
+                            <Row>
+                                <a href='mailto:atariusarmstrong@gmail.com?Subject=I%20Like%20Your%20Work' target='_top'>
+                                    <Button className='contactButton'>Contact me for more info</Button>
+                                </a>
+                            </Row>
                         </Col>
                         
                         <Col className='projectContainer'>
                             <PortfolioCarousel/>
                         </Col>
                     </Row>
+                    
                 </Container>
             </div>
         );

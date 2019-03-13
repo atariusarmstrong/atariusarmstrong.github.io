@@ -35,7 +35,7 @@ class About extends Component {
                                 </Col>
                                 <Col>
                                     <a href='images/atarius_armstrong_actor.pdf' download target='_blank'>
-                                        <Resume className='resumeButton'>Choreographer Resume</Resume>
+                                        <Resume className='resumeButton'>Performer Resume</Resume>
                                     </a>   
                                 </Col>
                             </Row>

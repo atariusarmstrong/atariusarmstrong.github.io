@@ -184,3 +184,26 @@ h2 {
 .navHeader {
   text-transform: uppercase;
 }
+.caption {
+  background-color:rgba(0,0,0, 0.5);
+
+}
+.caption h3 {
+  font-family: 'Oswald', sans-serif;
+  color: #9F9200;
+}
+
+.skills {
+  padding-top: 30px;
+}
+
+.contactButton {
+  border: 2px #9F9200 solid;
+  width: 200px;
+  padding: 20px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: auto;
+  text-align: center;
+}
