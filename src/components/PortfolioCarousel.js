@@ -33,6 +33,12 @@ class PortfolioCarousel extends Component {
             description: "Online store built and designed through the Wix platform. Utilizes Google SEO Analytics and branding through Adobe Photoshop.",
             url: 'https://kingdomkustoms.org',
             image: 'images/kingdomkustoms.png'
+        },
+        {
+            title: "Virtual Javascript Piano",
+            description: "Virtual piano created using vanilla Javascript. It works by pressing the corresponding keyboard inputs.",
+            url: 'https://github.com/atariusarmstrong/VirtualPiano',
+            image: 'images/virtualpiano.png'
         }
     ]
     }
