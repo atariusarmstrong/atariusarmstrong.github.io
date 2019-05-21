@@ -2,7 +2,7 @@
   "name": "atariusarmstrong",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://atariusarmstrong.com",
+  "homepage": "https://www.atariusarmstrong.com",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.2",
@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp CNAME build/CNAME",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
